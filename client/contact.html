@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue - ImageGen</title>
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="./src/style.css">
+    
+    <!-- Including Icons (Lucide Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="index.html">TIMgenerator - Test Images Generator</a> <!-- Link back to home -->
+            </div>
+            <a href="index.html" class="report-btn">
+                Generator
+            </a>
+            <button id="menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div id="content-wrapper" style="max-width: 896px; grid-template-columns: 1fr;">
+            
+            <!-- Error Report Form Column -->
+            <div id="settings-column">
+                <h1>Report an Issue</h1>
+                <p style="color: #64748b; margin-top: -1rem;">Found a bug or have a suggestion? Let us know!</p>
+                
+                <form id="errorReportForm">
+                    <!-- Error Title -->
+                    <div class="form-group">
+                        <label for="errorTitle">Title</label>
+                        <input type="text" id="errorTitle" placeholder="e.g., Border color not applying" required>
+                    </div>
+
+                    <!-- Error Description -->
+                    <div class="form-group">
+                        <label for="errorDescription">Description</label>
+                        <textarea id="errorDescription" rows="6" placeholder="Please provide as much detail as possible, including the steps to reproduce the issue." required></textarea>
+                    </div>
+
+                    <!-- User Email -->
+                    <div class="form-group">
+                        <label for="userEmail">Your Email (Optional)</label>
+                        <input type="email" id="userEmail" placeholder="you@example.com">
+                        <p style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">We'll only use this to contact you if we need more information.</p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button id="submitErrorBtn" type="submit">
+                        <i data-lucide="send"></i>
+                        <span>Submit Report</span>
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" style="display: none; padding: 1rem; background-color: #dcfce7; color: #166534; border-radius: 0.5rem; text-align: center; font-weight: 500;">
+                    <p>Thank you! Your report has been submitted successfully.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ImageGen</h3>
+                <p>Your complete tool for creating and manipulating images quickly and easily.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="#"><i data-lucide="github"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ImageGen. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script type="module" src="./src/contact.ts"></script>
+</body> 
+</html>

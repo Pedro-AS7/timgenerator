@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>TIMgenerator | Fast Placeholder Image Generator for Testing and Dev</title>
+		<meta
+			name="description"
+			content="Instantly create placeholder images with custom size, color, and shape. Perfect for programmers and testers populating layouts, databases, and prototypes."
+		/>
+
+		<!-- Link to the external CSS file -->
+		<link rel="stylesheet" href="./src/style.css" />
+
+		<!-- Including Icons (Lucide Icons) -->
+		<script src="https://unpkg.com/lucide@latest"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "SoftwareApplication",
+				"name": "ImageGen",
+				"applicationCategory": "DeveloperApplication",
+				"operatingSystem": "Web",
+				"description": "Instantly create placeholder images with custom size, color, and shape. Perfect for developers and testers.",
+				"offers": {
+					"@type": "Offer",
+					"price": "0"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<nav>
+				<div id="logo">
+					<a href="#">TIMgenerator - Test Images Generator</a>
+				</div>
+				<a href="contact.html" class="report-btn"> Report an Issue </a>
+				<button id="menu-btn">
+					<i data-lucide="menu"></i>
+				</button>
+			</nav>
+		</header>
+
+		<!-- This container will manage the main content and the ad sidebars -->
+		<div id="page-container">
+			<!-- Left Ad Sidebar -->
+			<aside id="left-ad-container">
+				<!-- Google AdSense Block -->
+				<div class="ad-placeholder">
+					<span>Ad Space</span>
+				</div>
+			</aside>
+
+			<!-- Main Content -->
+			<main>
+				<div id="content-wrapper">
+					<!-- Settings Column -->
+					<div id="settings-column">
+						<h1>Image Settings</h1>
+
+						<!-- Dimensions -->
+						<div class="form-group">
+							<h2>Dimensions (px)</h2>
+							<div class="input-group">
+								<div class="input-item">
+									<label for="xAxis">Width (X)</label>
+									<input type="number" id="xAxis" value="1920" />
+								</div>
+								<div class="input-item">
+									<label for="yAxis">Height (Y)</label>
+									<input type="number" id="yAxis" value="1080" />
+								</div>
+							</div>
+						</div>
+
+						<!-- Background Color & Quantity -->
+						<div class="form-group">
+							<div class="input-group-bottom">
+								<div class="input-item">
+									<label for="numImages">Quantity</label>
+									<input type="number" id="numImages" value="1" min="1" />
+								</div>
+								<div class="input-item-center">
+									<label for="BgColorPicker">Background</label>
+									<input type="color" id="BgColorPicker" value="#FFFFFF" />
+								</div>
+							</div>
+						</div>
+
+						<!-- Additional Options -->
+						<div class="form-group">
+							<h2>Additional Options</h2>
+							<div class="checkbox-group">
+								<div class="checkbox-item">
+									<input id="numerateCheck" type="checkbox" />
+									<label for="numerateCheck">Number images</label>
+								</div>
+								<div class="checkbox-item">
+									<input id="borderCheck" type="checkbox" />
+									<label for="borderCheck">Add border</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- Border Settings (initially hidden) -->
+						<div id="borderConfig">
+							<h3>Border Settings</h3>
+							<div class="input-group-bottom">
+								<div class="input-item">
+									<label for="borderWidth">Border Width (px)</label>
+									<input type="number" id="borderWidth" value="5" />
+								</div>
+								<div class="input-item-center">
+									<label for="borderColorPicker">Color</label>
+									<input type="color" id="borderColorPicker" value="#000000" />
+								</div>
+							</div>
+						</div>
+
+						<!-- Image Format -->
+						<div class="form-group">
+							<label for="imageFormat">Format</label>
+							<select id="imageFormat">
+								<option value="png">PNG</option>
+								<option value="jpeg">JPEG</option>
+								<option value="webp">WEBP</option>
+							</select>
+							<p id="filename-preview">Filename: <span id="formatPreview">image_1.png</span></p>
+						</div>
+
+						<!-- Generate Button -->
+						<button id="generateBtn">
+							<i data-lucide="image"></i>
+							<span>Generate Images</span>
+						</button>
+					</div>
+
+					<!-- Preview Column -->
+					<div id="preview-column">
+						<h2>Preview</h2>
+						<canvas id="img_ex"></canvas>
+						<span id="dimensions-info">1920 x 1080 px</span>
+					</div>
+				</div>
+			</main>
+
+			<!-- Right Ad Sidebar -->
+			<aside id="right-ad-container">
+				<!-- Google AdSense Block -->
+				<div class="ad-placeholder">
+					<span>Ad Space</span>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			<div class="footer-content">
+				<div class="footer-section">
+					<h3>TIMgenerator</h3>
+					<p>Your complete tool for creating and manipulating images quickly and easily for testing.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script type="module" src="./src/main.ts"></script>
+	</body>
+</html>
