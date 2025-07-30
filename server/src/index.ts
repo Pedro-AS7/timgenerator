@@ -37,7 +37,7 @@ app.post('/api/report', async (req, res) => {
 	
 })
 
-app.get('*', (req, res) => {
+app.get('/{*any}', (req, res) => {
     res.sendFile(path.resolve(clientBuildPath, 'index.html'));
 });
 
