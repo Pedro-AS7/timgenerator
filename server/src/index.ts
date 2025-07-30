@@ -38,6 +38,9 @@ app.post('/api/report', async (req, res) => {
 
 	
 })
+app.get('/contact.html', (req, res) => {
+    res.sendFile(path.resolve(clientBuildPath, 'contact.html'));
+});
 
 app.get('/{*any}', (req, res) => {
     res.sendFile(path.resolve(clientBuildPath, 'index.html'));
