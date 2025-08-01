@@ -6,7 +6,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT: number = parseInt(process.env.PORT!) || 3000
 
 app.use(express.json())
 app.use(
@@ -60,6 +60,6 @@ app.get('/{*any}', (req, res) => {
 
 
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
 	console.log(`Backend rodando em http://localhost:${PORT}`)
 })
