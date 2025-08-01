@@ -203,7 +203,6 @@ function generateImages() {
 	const averageRgb = (selectedBgColor.r + selectedBgColor.g + selectedBgColor.b) / 3
 	const selectedTextColor = averageRgb < 170 ? [255, 255, 255] : [0, 0, 0]
 
-
 	const fontName = 'ArialCustom, Arial, sans-serif'
 
 	for (let i = 0; i < parseInt(numImgInput.value); i++) {
@@ -254,11 +253,33 @@ function generateImages() {
 	}
 
 	if (generatedImageUrls.length > 0) {
+		const generates = {
+			img_generateds: parseInt(numImgInput.value),
+			size: `x: ${xAxis} y: ${yAxis}`,
+			bg_color: bgInput.value,
+			isBorder: isBorder,
+			isNumerate: isNumerate,
+		}
+		async function fetchGenerates() {
+			try {
+				await fetch('/api/generate', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(generates),
+				})
+				console.log('gerados: ' + generates)
+			} catch (error) {
+				console.log('Erro generate: ' + error)
+			}
+		}
+        fetchGenerates()
+
 		downloadImagesAsZip()
 	} else {
-        alert('Error generating images. Please try again.')
-    }
-
+		alert('Error generating images. Please try again.')
+	}
 }
 
 async function downloadImagesAsZip() {

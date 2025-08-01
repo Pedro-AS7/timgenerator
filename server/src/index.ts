@@ -33,11 +33,23 @@ app.post('/api/report', async (req, res) => {
     } catch(error) {
         console.log('Error to insert error into db: ' + error)
     }
-    
 
-
-	
 })
+
+app.post('/api/generate', async (req, res) => {
+    const data = req.body
+
+    console.log(data)
+
+    try {
+        const query = await sql`INSERT INTO generates (content) values(${data})`
+        console.log('Generate done: ' + data)
+    } catch(error) {
+        console.log('Error to insert error into db: ' + error)
+    }
+
+})
+
 app.get('/contact.html', (req, res) => {
     res.sendFile(path.resolve(clientBuildPath, 'contact.html'));
 });
