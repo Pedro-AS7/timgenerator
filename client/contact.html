@@ -3,10 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Report an Issue - ImageGen</title>
+		<title>Report an Issue - TIMgenerator</title>
 
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKC5SKY6TK"></script>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-JKC5SKY6TK"
+		></script>
 		<script>
 			window.dataLayer = window.dataLayer || []
 			function gtag() {
@@ -34,29 +37,36 @@
 		<header>
 			<nav>
 				<div id="logo">
-					<a href="index.html">TIMgenerator - Test Images Generator</a>
-					<!-- Link back to home -->
+					<a href="index.html" id="tim">TIM</a>
+					<a href="index.html" id="rest">generator</a>
 				</div>
 				<a href="index.html" class="report-btn"> Generator </a>
-				<button id="menu-btn">
-					<i data-lucide="menu"></i>
-				</button>
 			</nav>
 		</header>
 
 		<!-- Main Content -->
 		<main>
-			<div id="content-wrapper" style="max-width: 896px; grid-template-columns: 1fr">
+			<div
+				id="content-wrapper"
+				style="max-width: 896px; grid-template-columns: 1fr"
+			>
 				<!-- Error Report Form Column -->
 				<div id="settings-column">
 					<h1>Report an Issue</h1>
-					<p style="color: #64748b; margin-top: -1rem">Found a bug or have a suggestion? Let us know!</p>
+					<p style="color: #64748b; margin-top: -1rem">
+						Found a bug or have a suggestion? Let us know!
+					</p>
 
 					<form id="errorReportForm">
 						<!-- Error Title -->
 						<div class="form-group">
 							<label for="errorTitle">Title</label>
-							<input type="text" id="errorTitle" placeholder="e.g., Border color not applying" required />
+							<input
+								type="text"
+								id="errorTitle"
+								placeholder="e.g., Border color not applying"
+								required
+							/>
 						</div>
 
 						<!-- Error Description -->
@@ -73,9 +83,20 @@
 						<!-- User Email -->
 						<div class="form-group">
 							<label for="userEmail">Your Email (Optional)</label>
-							<input type="email" id="userEmail" placeholder="you@example.com" />
-							<p style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem">
-								We'll only use this to contact you if we need more information.
+							<input
+								type="email"
+								id="userEmail"
+								placeholder="you@example.com"
+							/>
+							<p
+								style="
+									font-size: 0.75rem;
+									color: #64748b;
+									margin-top: 0.25rem;
+								"
+							>
+								We'll only use this to contact you if we need
+								more information.
 							</p>
 						</div>
 
@@ -99,7 +120,10 @@
 							font-weight: 500;
 						"
 					>
-						<p>Thank you! Your report has been submitted successfully.</p>
+						<p>
+							Thank you! Your report has been submitted
+							successfully.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -109,19 +133,13 @@
 		<footer>
 			<div class="footer-content">
 				<div class="footer-section">
-					<h3>ImageGen</h3>
-					<p>Your complete tool for creating and manipulating images quickly and easily.</p>
+					<h3>TIMgenerator</h3>
+					<p>
+						Your complete tool for creating and manipulating images
+						quickly and easily.
+					</p>
 				</div>
-				<div class="footer-section">
-					<h3>Follow Us</h3>
-					<div class="footer-socials">
-						<a href="#"><i data-lucide="github"></i></a>
-						<a href="#"><i data-lucide="linkedin"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<p>&copy; 2024 ImageGen. All rights reserved.</p>
+
 			</div>
 		</footer>
 
