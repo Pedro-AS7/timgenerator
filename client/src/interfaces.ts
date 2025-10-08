@@ -1,26 +1,26 @@
 export interface Colors {
-	1: number[]
-	2: number[]
-	3: number[]
+	1: number[];
+	2: number[];
+	3: number[];
 }
 export interface ImageUrl {
-	name: string
-	dataUrl: string
+	name: string;
+	dataUrl: string;
 }
 
 export interface ImagePreview {
-    w: number,
-    h: number,
-    borderProportion: number
+	w: number;
+	h: number;
+	borderProportion: number;
 }
 
 export interface Checker {
-    isCheckNumerate?: string,
-    isCheckBorder?: string,
+	isCheckNumerate?: string;
+	isCheckBorder?: string;
 }
 
 export interface ImagesFormats {
-    png: string,
-    jpeg: string,
-    webp: string
+	png: string;
+	jpeg: string;
+	webp: string;
 }

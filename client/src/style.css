@@ -1,6 +1,6 @@
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
-		'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+		"SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #f5f5f7;
 	color: #1d1d1f;
 	margin: 0;
@@ -27,17 +27,16 @@ main {
 	width: 100%;
 }
 
-/* Ad Sidebars */
 #left-ad-container,
 #right-ad-container {
-	display: none; /* Hidden by default */
+	display: none;
 	padding: 1rem;
 }
 
 .ad-placeholder {
 	background-color: #f2f2f2;
-	width: 160px; /* Standard ad width */
-	height: 600px; /* Standard ad height */
+	width: 160px;
+	height: 600px;
 	display: none;
 	align-items: center;
 	justify-content: center;
@@ -47,8 +46,7 @@ main {
 	border: 1px dashed #d2d2d7;
 }
 
-/* Custom Color Picker Styles */
-input[type='color'] {
+input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
 	width: 48px;
@@ -59,20 +57,19 @@ input[type='color'] {
 	border: 2px solid #e5e5e7;
 	background: #ffffff;
 }
-input[type='color']:hover {
+input[type="color"]:hover {
 	transform: scale(1.05);
 	border-color: #007aff;
 	box-shadow: 0 4px 12px rgba(0, 122, 255, 0.15);
 }
-input[type='color']::-webkit-color-swatch-wrapper {
+input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
 }
-input[type='color']::-webkit-color-swatch {
+input[type="color"]::-webkit-color-swatch {
 	border: none;
 	border-radius: 10px;
 }
 
-/* Header */
 header {
 	height: 88px;
 	display: flex;
@@ -87,7 +84,6 @@ header {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Header Subtitle */
 .header-subtitle {
 	background-color: rgba(245, 245, 247, 0.5);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -148,7 +144,7 @@ header nav {
 	border-radius: 980px;
 	transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	text-decoration: none;
-	display: none; /* Hidden on mobile by default */
+	display: none;
 	font-size: 0.875rem;
 	letter-spacing: -0.022em;
 }
@@ -173,7 +169,6 @@ header nav {
 	background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Main Content */
 #content-wrapper {
 	width: 100%;
 	max-width: 1200px;
@@ -218,7 +213,6 @@ header nav {
 	letter-spacing: 0.1em;
 }
 
-/* Form Elements */
 .input-group,
 .input-group-bottom {
 	display: flex;
@@ -243,10 +237,10 @@ label {
 	letter-spacing: -0.022em;
 }
 
-input[type='number'],
+input[type="number"],
 select,
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
 	width: 100%;
 	padding: 0.875rem 1rem;
 	background-color: rgba(255, 255, 255, 0.8);
@@ -259,10 +253,10 @@ input[type='email'] {
 	font-weight: 400;
 	letter-spacing: -0.022em;
 }
-input[type='number']:focus,
+input[type="number"]:focus,
 select:focus,
-input[type='text']:focus,
-input[type='email']:focus {
+input[type="text"]:focus,
+input[type="email"]:focus {
 	outline: none;
 	border-color: #007aff;
 	box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
@@ -280,7 +274,7 @@ input[type='email']:focus {
 	align-items: center;
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
 	height: 1.25rem;
 	width: 1.25rem;
 	color: #007aff;
@@ -295,12 +289,12 @@ input[type='checkbox'] {
 	cursor: pointer;
 	transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-input[type='checkbox']:checked {
+input[type="checkbox"]:checked {
 	background-color: #007aff;
 	border-color: #007aff;
 }
-input[type='checkbox']:checked::after {
-	content: '✓';
+input[type="checkbox"]:checked::after {
+	content: "✓";
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -329,7 +323,7 @@ input[type='checkbox']:checked::after {
 	font-size: 0.875rem;
 	margin-bottom: 0;
 }
-#borderConfig input[type='number'] {
+#borderConfig input[type="number"] {
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -361,7 +355,6 @@ input[type='checkbox']:checked::after {
 	box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.2);
 }
 
-/* Preview Column */
 #preview-column {
 	align-items: center;
 	justify-content: center;
@@ -401,7 +394,6 @@ input[type='checkbox']:checked::after {
 	letter-spacing: -0.022em;
 }
 
-/* Footer */
 footer {
 	background-color: #1d1d1f;
 	color: #ffffff;
@@ -457,14 +449,12 @@ main {
 	flex-grow: 1;
 }
 
-/* Specific styles for the contact.html form */
 #errorReportForm {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
 }
 
-/* Styles for Textarea */
 textarea {
 	width: 100%;
 	padding: 0.875rem 1rem;
@@ -488,7 +478,6 @@ textarea:focus {
 	background-color: #ffffff;
 }
 
-/* Styles for the Submit Button */
 #submitErrorBtn {
 	width: 100%;
 	background-color: #007aff;
@@ -525,19 +514,19 @@ textarea:focus {
 	}
 
 	#tim {
-		font-size: 2.0rem;
+		font-size: 2rem;
 	}
 
 	header {
 		height: 100px;
 		display: flex;
 		flex-direction: column;
-        align-items: center;
-        justify-content: center;
+		align-items: center;
+		justify-content: center;
 	}
 	.header-subtitle p {
-        padding-left: 2rem;
-        padding-right: 2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
 		font-size: 0.8rem;
 	}
 
@@ -547,17 +536,15 @@ textarea:focus {
 		padding: 1rem 1.5rem;
 		display: flex;
 		flex-direction: row;
-        justify-content: space-between;
+		justify-content: space-between;
 		align-items: center;
 		box-sizing: border-box;
 	}
 
-    
-
 	.report-btn {
-        text-align: center;
-        width: 100px;
-        padding: 0.5rem 0;
+		text-align: center;
+		width: 100px;
+		padding: 0.5rem 0;
 		font-size: 0.7rem;
 		display: block;
 	}
@@ -572,7 +559,6 @@ textarea:focus {
 	}
 }
 
-/* Responsive Styles */
 @media (min-width: 768px) {
 	.report-btn {
 		display: block;
@@ -592,11 +578,10 @@ textarea:focus {
 	}
 }
 
-/* Layout for wide screens with ad space */
 @media (min-width: 1680px) {
 	#page-container {
 		display: grid;
-		grid-template-columns: 1fr auto 1fr; /* Center column is sized by content, side columns take rest */
+		grid-template-columns: 1fr auto 1fr;
 		justify-content: center;
 		gap: 1rem;
 	}
@@ -609,18 +594,16 @@ textarea:focus {
 	}
 
 	#left-ad-container {
-		justify-content: flex-end; /* Aligns ad to the right */
+		justify-content: flex-end;
 	}
 
 	#right-ad-container {
-		justify-content: flex-start; /* Aligns ad to the left */
+		justify-content: flex-start;
 	}
 
 	main {
-		/* Reset grid properties that might be inherited from style.css */
 		grid-column: unset;
 
-		/* Ensure flex centering is maintained */
 		display: flex;
 		justify-content: center;
 	}

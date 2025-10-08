@@ -5,19 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Report an Issue - TIMgenerator</title>
 
-		<!-- Google tag (gtag.js) -->
 		<script
 			async
 			src="https://www.googletagmanager.com/gtag/js?id=G-JKC5SKY6TK"
 		></script>
 		<script>
-			window.dataLayer = window.dataLayer || []
+			window.dataLayer = window.dataLayer || [];
 			function gtag() {
-				dataLayer.push(arguments)
+				dataLayer.push(arguments);
 			}
-			gtag('js', new Date())
+			gtag("js", new Date());
 
-			gtag('config', 'G-JKC5SKY6TK')
+			gtag("config", "G-JKC5SKY6TK");
 		</script>
 
 		<script
@@ -26,14 +25,11 @@
 			crossorigin="anonymous"
 		></script>
 
-		<!-- Link to the external CSS file -->
 		<link rel="stylesheet" href="./src/style.css" />
 
-		<!-- Including Icons (Lucide Icons) -->
 		<script src="https://unpkg.com/lucide@latest"></script>
 	</head>
 	<body>
-		<!-- Header -->
 		<header>
 			<nav>
 				<div id="logo">
@@ -44,13 +40,11 @@
 			</nav>
 		</header>
 
-		<!-- Main Content -->
 		<main>
 			<div
 				id="content-wrapper"
 				style="max-width: 896px; grid-template-columns: 1fr"
 			>
-				<!-- Error Report Form Column -->
 				<div id="settings-column">
 					<h1>Report an Issue</h1>
 					<p style="color: #64748b; margin-top: -1rem">
@@ -58,7 +52,6 @@
 					</p>
 
 					<form id="errorReportForm">
-						<!-- Error Title -->
 						<div class="form-group">
 							<label for="errorTitle">Title</label>
 							<input
@@ -69,7 +62,6 @@
 							/>
 						</div>
 
-						<!-- Error Description -->
 						<div class="form-group">
 							<label for="errorDescription">Description</label>
 							<textarea
@@ -80,7 +72,6 @@
 							></textarea>
 						</div>
 
-						<!-- User Email -->
 						<div class="form-group">
 							<label for="userEmail">Your Email (Optional)</label>
 							<input
@@ -100,14 +91,12 @@
 							</p>
 						</div>
 
-						<!-- Submit Button -->
 						<button id="submitErrorBtn" type="submit">
 							<i data-lucide="send"></i>
 							<span>Submit Report</span>
 						</button>
 					</form>
 
-					<!-- Success Message -->
 					<div
 						id="successMessage"
 						style="
@@ -129,7 +118,6 @@
 			</div>
 		</main>
 
-		<!-- Footer -->
 		<footer>
 			<div class="footer-content">
 				<div class="footer-section">
@@ -139,7 +127,6 @@
 						quickly and easily.
 					</p>
 				</div>
-
 			</div>
 		</footer>
 
