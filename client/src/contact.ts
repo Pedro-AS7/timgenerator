@@ -5,40 +5,22 @@ const errorTitle = document.getElementById("errorTitle") as HTMLInputElement;
 const errorDescription = document.getElementById(
 	"errorDescription"
 ) as HTMLTextAreaElement;
-const userEmail = document.getElementById("userEmail") as HTMLInputElement;
 const successMessage = document.getElementById(
 	"successMessage"
 ) as HTMLDivElement;
 
-interface ErrorReport {
-	title: string;
-	description: string;
-	email: string;
-}
+// The site is static (GitHub Pages), so reports become GitHub issues
+const ISSUES_URL = "https://github.com/Pedro-AS7/timgenerator/issues/new";
 
 function submitError() {
-	const title = errorTitle.value;
-	console.log("lfjkdnsadkjcnd");
-	const description = errorDescription.value;
-	const email = userEmail.value;
-
-	const errorReport: ErrorReport = {
-		title,
-		description,
-		email,
-	};
-	console.log(errorReport);
-	fetch("/api/report", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify(errorReport),
+	const params = new URLSearchParams({
+		title: errorTitle.value,
+		body: errorDescription.value,
 	});
+	window.open(`${ISSUES_URL}?${params}`, "_blank", "noopener");
 
 	errorTitle.value = "";
 	errorDescription.value = "";
-	userEmail.value = "";
 
 	// Show success message
 	successMessage.style.display = "block";
@@ -52,5 +34,4 @@ function submitError() {
 reportForm.addEventListener("submit", function (event) {
 	event.preventDefault(); // Impede o recarregamento da página
 	submitError();
-	console.log("Formulário enviado!");
 });

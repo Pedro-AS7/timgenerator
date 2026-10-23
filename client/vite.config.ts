@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
+	// Relative paths: GitHub Pages serves the site under /timgenerator/
+	base: "./",
 	build: {
 		rollupOptions: {
 			input: {
